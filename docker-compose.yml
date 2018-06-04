@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    #VOLUME: myvol
+    environment:
+      POSTGRES_PASSWORD: password
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+
